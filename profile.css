@@ -1,0 +1,189 @@
+/* Reset default margins and paddings */
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #262a2e;
+}
+
+/* Navigation */
+.navbar {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    background-color: rgb(122, 178, 211) !important;
+}
+
+.navbar-brand img {
+    height: 2rem;
+}
+
+.navbar-nav li {
+    padding-right: 0.7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding-top: 0.8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(0, 38, 68);
+}
+
+/* End Navigation */
+
+/* username container styling */
+.username-container {
+    max-width: 98%;
+    margin: 0 auto; /* Center the container */
+    margin-top: 80px;
+    background-color: #B9E5E8;
+    border-radius: 8px;
+    
+}
+
+/* Header styling */
+.header {
+    max-width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: black;
+}
+
+/* End username container styling */
+.card {
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    background-color: #e0f4e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.right {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.right p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.right .skill {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(122, 178, 211);
+    border-radius: 5px;
+}
+
+.right .skill p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Change background color of the Skills section */
+.card:nth-of-type(2) {
+    background-color: #7ab2d3; /* New color for Skills section */
+}
+
+/* Skills Table Styling */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #f0f9ff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skills-table th,
+.skills-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.skills-table th {
+    background-color: #000000;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Alternate Row Colors */
+.skills-table tr:nth-child(odd) {
+    background-color: #ffffff; /* White */
+}
+
+.skills-table tr:nth-child(even) {
+    background-color: #f0f0f0; /* Light grey */
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    .skills-table th,
+    .skills-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+
+/* Edit Button */
+.edit-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.edit-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #5c5c5c;
+    transition: fill 0.3s;
+}
+
+.edit-btn:hover svg {
+    fill: #000000;
+}
+/* Edit button end */
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    .skills-table th,
+    .skills-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left,
+    .right {
+        text-align: left;
+        width: 100%;
+    }
+}

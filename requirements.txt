@@ -1,0 +1,6 @@
+pymysql
+Flask
+hashlib
+flask-login
+flask-cors
+dotenv

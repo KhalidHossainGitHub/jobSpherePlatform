@@ -1,0 +1,82 @@
+/* Global Body Styles */
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #262a2e;
+}
+
+/* Navigation Styles */
+.navbar {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    background-color: rgb(122, 178, 211) !important;
+}
+
+.navbar-brand img {
+    height: 2rem;
+}
+
+.navbar-nav li {
+    padding-right: 0.7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding-top: 0.8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(0, 38, 68);
+}
+
+/* Sidebar Filter */
+#filter-sidebar {
+    background-color: #DFF2EB;
+    padding: 1rem;
+    border-right: 1px solid #B9E5E8;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    border-radius: 0 15px 15px 0; /* Rounded corners */
+}
+
+/* Course List Styles */
+.course-list {
+    overflow-y: auto;
+    max-height: 85vh;
+    padding: 1rem;
+    background-color: #F7FAFC; /* Slight contrast */
+}
+
+.course-item {
+    border: 1px solid #B9E5E8;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.course-item:hover {
+    background-color: #DFF2EB;
+}
+
+.course-item h5 {
+    color: #4A628A;
+    font-weight: bold;
+    background-color: #B9E5E8;
+    padding: 0.5rem;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.course-item h5:hover {
+    background-color: #7AB2D3;
+}
+
+.course-item p {
+    color: #666;
+}

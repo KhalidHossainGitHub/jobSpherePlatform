@@ -1,0 +1,71 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #262a2e;
+}
+
+/*-- Navigation --*/
+.navbar {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    background-color: rgb(122, 178, 211) !important;
+}
+
+.navbar-brand img {
+    height: 2rem;
+}
+
+.navbar-nav li {
+    padding-right: 0.7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding-top: 0.8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(0, 38, 68);
+}
+
+/* Adjust the filter container styling */
+.filter-container {
+    max-width: 98%; /* Full width of the screen */
+    padding: 1rem;
+    margin: 0 auto; /* Center the container */
+    margin-top: 80px;
+    background-color: #B9E5E8; 
+    border-radius: 8px; 
+}
+
+/* Main container for content */
+.container {
+    max-width: 98%; /* This can be adjusted as needed */
+    padding: 1rem; /* Added padding */
+    margin: 0 auto; /* Center the container */
+}
+
+/*-- Left Column (Scrollable) --*/
+.col-lg-4 {
+    max-height: 600px; /* Set a max height to control the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds max height */
+    background-color:rgb(223, 242, 235); /* Primary background color */
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    border-top-left-radius: 8px; /* Rounded top left corner */
+    border-bottom-left-radius: 8px; /* Rounded bottom left corner */
+}
+
+/*-- Right Column (Scrollable) --*/
+.col-lg-8 {
+    max-height: 600px; /* Same max height as left column */
+    overflow-y: auto; /* Enable vertical scrolling for the right column as well */
+    background-color: rgb(122, 178, 211); /* Secondary background color */
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    border-top-right-radius: 8px; /* Rounded top right corner */
+    border-bottom-right-radius: 8px; /* Rounded bottom right corner */
+}

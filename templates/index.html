@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Job Sphere</title>
+        <!-- Correct path to Bootstrap CSS -->
+        <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='bootstrap-4.1.3-dist/css/bootstrap.min.css') }}"
+    />
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/fixed.css') }}"
+    />
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='/css/index.css') }}"
+    />
+    </head>
+
+    <body data-spy="scroll" data-target="#navbarResponsive">
+        <!-- Start Home Section -->
+        <div id="home">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#home"
+            ><img
+                src="{{ url_for('static', filename='images/jobSphereLogo.jpeg') }}"
+                alt="Logo"
+            /></a>
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="resume.html">Resume</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="courseFinder.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        <!-- End Navigation -->
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-container">
+        <form>
+            <fieldset>
+            <legend>Filters</legend>
+            <div class="row">
+                <div class="col-md-3 col-12">
+                <div class="form-group">
+                    <label for="employmentType">Employment Type</label>
+                    <select class="form-control" id="employmentType">
+                    <option>Full-Time</option>
+                    <option>Part-Time</option>
+                    <option>Contract</option>
+                    </select>
+                </div>
+                </div>
+                <div class="col-md-3 col-12">
+                <div class="form-group">
+                    <label for="remoteOption">Remote Option</label>
+                    <select class="form-control" id="remoteOption">
+                    <option>Remote</option>
+                    <option>On-Site</option>
+                    <option>Hybrid</option>
+                    </select>
+                </div>
+                </div>
+                <div class="col-md-3 col-12">
+                <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <select class="form-control" id="industry">
+                    <option>Technology</option>
+                    <option>Finance</option>
+                    <option>Healthcare</option>
+                    </select>
+                </div>
+                </div>
+                <div class="col-md-3 col-12">
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <select class="form-control" id="experience">
+                    <option>0-1 Years</option>
+                    <option>2-5 Years</option>
+                    <option>5+ Years</option>
+                    </select>
+                </div>
+                </div>
+            </div>
+            </fieldset>
+        </form>
+        </div>
+
+        <!-- Jobs Section -->
+        <div class="container">
+        <div class="row">
+            <!-- Left Column (30% on large screens, 100% on small screens) -->
+            <div class="col-lg-4 col-12 p-3">
+            <h4>Job Listings</h4>
+            <ul class="list-group" id="job-list">
+                <!-- Job listings will be dynamically added here by JavaScript -->
+            </ul>
+            </div>
+            <!-- Right Column (70% on large screens, 100% on small screens) -->
+            <div class="col-lg-8 col-12 p-3 text-black">
+                <div id="job-details" class="list-group-item">
+                    <p>Select a job to view more details here.</p>
+                </div>                
+            </div>
+        </div>
+        </div>
+        <!-- Jobs End-->
+
+        <!-- Script Source Files -->
+        <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap-4.1.3-dist/js/bootstrap.min.js') }}"></script>
+        <!-- Add the script to load the main.js file -->
+        <script src="../static/js/index.js"></script>
+    </body>
+</html>

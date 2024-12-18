@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Resume Analyzer</h1>
+        <p class="text-center">Upload a resume and ask a question about it.</p>
+        <form id="resumeForm" class="mt-4" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="resume" class="form-label">Upload Resume (PDF or DOCX)</label>
+                <input type="file" class="form-control" id="resume" name="resume" accept=".pdf,.docx" required>
+            </div>
+            <div class="mb-3">
+                <label for="question" class="form-label">Enter Your Question</label>
+                <textarea class="form-control" id="question" name="question" rows="3" placeholder="Ask a question about the resume..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Analyze Resume</button>
+        </form>
+        <div id="response" class="mt-4"></div>
+    </div>
+
+    <script>
+        document.getElementById("resumeForm").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent the form from refreshing the page
+
+    const formData = new FormData(this); // Get form data
+    const responseDiv = document.getElementById("response");
+    responseDiv.innerHTML = ""; // Clear previous response
+
+    try {
+        // Send a POST request to the Flask backend
+        const response = await fetch("http://127.0.0.1:5000/analyze-resume", {
+            method: "POST",
+            body: formData,
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            // Trigger the download of the new resume PDF
+            const blob = await response.blob();
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "analyzed_resume.pdf";
+            link.click();
+
+            // Optionally display a success message
+            responseDiv.innerHTML = `<div class="alert alert-success">${result.message}</div>`;
+        } else {
+            responseDiv.innerHTML = `<div class="alert alert-danger">${result.error}</div>`;
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        responseDiv.innerHTML = `<div class="alert alert-danger">Failed to analyze the resume. Please try again.</div>`;
+    }
+});
+    </script>
+</body>
+
+</html>

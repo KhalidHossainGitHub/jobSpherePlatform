@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.login-container-image {
+    background-image: linear-gradient(rgba(185, 229, 232, 0.5), rgba(122, 178, 211, 0.5)), url("../images/jobSphereLogo.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.login-text-black {
+    transform: translateY(100px);
+    font-size: 4rem;
+    text-align: center;
+}
+
+/*
+.small-text-login{
+    transform: translateY(-120px);
+}*/
